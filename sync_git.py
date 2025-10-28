@@ -30,6 +30,7 @@ def main():
 
     # 3️⃣ Gestashte Änderungen wiederherstellen
     print("\n📤 Wende lokale Änderungen wieder an...")
+    run("git diff --name-only --diff-filter=U | xargs git rm -f", check=False)
     stash_result = run("git stash pop", check=False)
 
     if "conflict" in stash_result.stdout.lower() or "conflict" in stash_result.stderr.lower():
