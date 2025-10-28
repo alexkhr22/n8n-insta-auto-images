@@ -1,0 +1,1 @@
+Keep the folder names the same so that the tools work. With sync_git.py, you can synchronize your GitHub repo with your local folder structure. This way, you can work completely locally.
